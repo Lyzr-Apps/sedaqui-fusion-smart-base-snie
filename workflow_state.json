@@ -1,0 +1,42 @@
+{
+  "agents": {
+    "digital_product_agent": {
+      "agent_id": "699f3284491a682589955950",
+      "name": "Digital Product Content Agent",
+      "status": "created"
+    },
+    "smart_shop_agent": {
+      "agent_id": "699f3284f13aaac966413d92",
+      "name": "Smart Shop Product Agent",
+      "status": "created"
+    },
+    "ai_agent_storefront": {
+      "agent_id": "699f3285baa7d9b4a230cbe2",
+      "name": "AI Agent Storefront Agent",
+      "status": "created"
+    },
+    "customer_support_agent": {
+      "agent_id": "699f32a1baa7d9b4a230cbe8",
+      "name": "Customer Support Agent",
+      "status": "created",
+      "has_knowledge_base": true,
+      "rag_id": "699f328500c2d274880ef763",
+      "rag_name": "sedaquisupportkbohid"
+    },
+    "order_fulfillment_agent": {
+      "agent_id": "699f32b4d19ec1f1c4d3e7fe",
+      "name": "Order Fulfillment Agent",
+      "status": "created",
+      "tools": ["GMAIL_SEND_EMAIL"]
+    }
+  },
+  "knowledge_bases": {
+    "sedaqui_support_kb": {
+      "rag_id": "699f328500c2d274880ef763",
+      "rag_name": "sedaquisupportkbohid",
+      "description": "Knowledge base containing FAQs, policies, product information, and support documentation for the SEDAQUI digital commerce platform",
+      "linked_agent_id": "699f32a1baa7d9b4a230cbe8"
+    }
+  },
+  "schedules": {}
+}

@@ -1,0 +1,18 @@
+{
+  "agent_name": "Customer Support Agent",
+  "agent_id": "699f32a1baa7d9b4a230cbe8",
+  "description": "Answers customer questions about products, orders, policies, and refunds using the platform knowledge base via chat on the Contact page",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "answer": "string",
+    "follow_up_question": "string",
+    "category": "string"
+  },
+  "example_response": {
+    "answer": "sample string",
+    "follow_up_question": "sample string",
+    "category": "sample string"
+  }
+}

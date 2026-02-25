@@ -1,0 +1,36 @@
+{
+  "agent_name": "AI Agent Storefront Agent",
+  "agent_id": "699f3285baa7d9b4a230cbe2",
+  "description": "Creates compelling product page copy, feature lists, and upsell recommendations for AI agents ($5-$25 tier)",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "agent_title": "string",
+    "description": "string",
+    "capabilities": [
+      "string"
+    ],
+    "suggested_price": "string",
+    "price_justification": "string",
+    "upsell_recommendation": "string",
+    "tagline": "string",
+    "use_cases": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "agent_title": "sample string",
+    "description": "sample string",
+    "capabilities": [
+      "sample string"
+    ],
+    "suggested_price": "sample string",
+    "price_justification": "sample string",
+    "upsell_recommendation": "sample string",
+    "tagline": "sample string",
+    "use_cases": [
+      "sample string"
+    ]
+  }
+}

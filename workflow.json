@@ -1,0 +1,83 @@
+{
+  "workflow": {
+    "nodes": [
+      {"id": "input_node", "type": "Input", "label": "User Input", "nodeCategory": "input"},
+      {"id": "digital_product_agent", "type": "Agent", "label": "Digital Product Content Agent", "nodeCategory": "agent"},
+      {"id": "smart_shop_agent", "type": "Agent", "label": "Smart Shop Product Agent", "nodeCategory": "agent"},
+      {"id": "ai_agent_storefront", "type": "Agent", "label": "AI Agent Storefront Agent", "nodeCategory": "agent"},
+      {"id": "customer_support_agent", "type": "Agent", "label": "Customer Support Agent", "nodeCategory": "agent"},
+      {"id": "order_fulfillment_agent", "type": "Agent", "label": "Order Fulfillment Agent", "nodeCategory": "agent"}
+    ],
+    "edges": [
+      {"source": "input_node", "target": "digital_product_agent"},
+      {"source": "input_node", "target": "smart_shop_agent"},
+      {"source": "input_node", "target": "ai_agent_storefront"},
+      {"source": "input_node", "target": "customer_support_agent"},
+      {"source": "input_node", "target": "order_fulfillment_agent"}
+    ]
+  },
+  "agents": [
+    {
+      "node_id": "digital_product_agent",
+      "agent_id": "699f3284491a682589955950",
+      "name": "Digital Product Content Agent",
+      "description": "Generates optimized product descriptions, SEO titles, and marketing copy for e-books, courses, and SaaS tools in the Digital Hub",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "tools": [],
+      "capabilities": ["text"]
+    },
+    {
+      "node_id": "smart_shop_agent",
+      "agent_id": "699f3284f13aaac966413d92",
+      "name": "Smart Shop Product Agent",
+      "description": "Auto-generates SEO-optimized product descriptions, pricing recommendations, and profit analysis for dropshipped physical products",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "tools": [],
+      "capabilities": ["text"]
+    },
+    {
+      "node_id": "ai_agent_storefront",
+      "agent_id": "699f3285baa7d9b4a230cbe2",
+      "name": "AI Agent Storefront Agent",
+      "description": "Creates compelling product page copy, feature lists, and upsell recommendations for AI agents ($5-$25 tier)",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "tools": [],
+      "capabilities": ["text"]
+    },
+    {
+      "node_id": "customer_support_agent",
+      "agent_id": "699f32a1baa7d9b4a230cbe8",
+      "name": "Customer Support Agent",
+      "description": "Answers customer questions about products, orders, policies, and refunds using the platform knowledge base via chat on the Contact page",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "tools": [],
+      "capabilities": ["text", "knowledge_base"],
+      "rag_id": "699f328500c2d274880ef763",
+      "rag_name": "sedaquisupportkbohid"
+    },
+    {
+      "node_id": "order_fulfillment_agent",
+      "agent_id": "699f32b4d19ec1f1c4d3e7fe",
+      "name": "Order Fulfillment Agent",
+      "description": "Composes and sends post-purchase confirmation emails, digital product delivery links, and upsell follow-ups via Gmail",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "tools": ["GMAIL_SEND_EMAIL"],
+      "capabilities": ["text", "gmail"]
+    }
+  ]
+}

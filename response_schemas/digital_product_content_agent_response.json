@@ -1,0 +1,34 @@
+{
+  "agent_name": "Digital Product Content Agent",
+  "agent_id": "699f3284491a682589955950",
+  "description": "Generates optimized product descriptions, SEO titles, and marketing copy for e-books, courses, and SaaS tools in the Digital Hub",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "product_title": "string",
+    "description": "string",
+    "features": [
+      "string"
+    ],
+    "tagline": "string",
+    "pricing_tier": "string",
+    "pricing_reasoning": "string",
+    "seo_keywords": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "product_title": "sample string",
+    "description": "sample string",
+    "features": [
+      "sample string"
+    ],
+    "tagline": "sample string",
+    "pricing_tier": "sample string",
+    "pricing_reasoning": "sample string",
+    "seo_keywords": [
+      "sample string"
+    ]
+  }
+}

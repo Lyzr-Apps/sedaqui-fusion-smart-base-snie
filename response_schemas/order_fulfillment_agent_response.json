@@ -1,0 +1,24 @@
+{
+  "agent_name": "Order Fulfillment Agent",
+  "agent_id": "699f32b4d19ec1f1c4d3e7fe",
+  "description": "Composes and sends post-purchase confirmation emails, digital product delivery links, and upsell follow-ups via Gmail",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "email_subject": "string",
+    "email_body_preview": "string",
+    "status": "string",
+    "upsell_products": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "email_subject": "sample string",
+    "email_body_preview": "sample string",
+    "status": "sample string",
+    "upsell_products": [
+      "sample string"
+    ]
+  }
+}

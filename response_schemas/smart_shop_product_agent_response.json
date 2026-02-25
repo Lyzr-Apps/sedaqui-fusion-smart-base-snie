@@ -1,0 +1,36 @@
+{
+  "agent_name": "Smart Shop Product Agent",
+  "agent_id": "699f3284f13aaac966413d92",
+  "description": "Auto-generates SEO-optimized product descriptions, pricing recommendations, and profit analysis for dropshipped physical products",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "product_title": "string",
+    "description": "string",
+    "features": [
+      "string"
+    ],
+    "recommended_price": "string",
+    "profit_analysis": "string",
+    "tagline": "string",
+    "category_tags": [
+      "string"
+    ],
+    "shipping_note": "string"
+  },
+  "example_response": {
+    "product_title": "sample string",
+    "description": "sample string",
+    "features": [
+      "sample string"
+    ],
+    "recommended_price": "sample string",
+    "profit_analysis": "sample string",
+    "tagline": "sample string",
+    "category_tags": [
+      "sample string"
+    ],
+    "shipping_note": "sample string"
+  }
+}
