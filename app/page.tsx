@@ -96,34 +96,35 @@ interface SampleProduct {
   category: string
   type: 'digital' | 'physical' | 'ai-agent'
   tags?: string[]
+  image?: string
 }
 
 // === SAMPLE DATA ===
 const SAMPLE_DIGITAL_PRODUCTS: SampleProduct[] = [
-  { id: 'd1', title: 'Mastering TypeScript', description: 'A comprehensive guide to advanced TypeScript patterns and enterprise architecture.', price: 29.99, category: 'E-books', type: 'digital', tags: ['Programming', 'TypeScript'] },
-  { id: 'd2', title: 'UX Design Fundamentals', description: 'Learn user experience design principles from industry experts with hands-on projects.', price: 49.99, category: 'Courses', type: 'digital', tags: ['Design', 'UX'] },
-  { id: 'd3', title: 'Cloud Deployment Toolkit', description: 'SaaS tool for automating multi-cloud infrastructure deployments and monitoring.', price: 19.99, category: 'SaaS Tools', type: 'digital', tags: ['DevOps', 'Cloud'] },
-  { id: 'd4', title: 'Data Science with Python', description: 'End-to-end data science workflow using Python, Pandas, and Scikit-learn.', price: 39.99, category: 'Courses', type: 'digital', tags: ['Data Science', 'Python'] },
-  { id: 'd5', title: 'Brand Identity Blueprint', description: 'Step-by-step guide to building a memorable brand identity from scratch.', price: 14.99, category: 'E-books', type: 'digital', tags: ['Branding', 'Marketing'] },
-  { id: 'd6', title: 'Invoicer Pro', description: 'Automated invoicing and billing application for freelancers and agencies.', price: 9.99, category: 'Apps', type: 'digital', tags: ['Finance', 'Productivity'] },
+  { id: 'd1', title: 'Mastering TypeScript', description: 'A comprehensive guide to advanced TypeScript patterns and enterprise architecture.', price: 29.99, category: 'E-books', type: 'digital', tags: ['Programming', 'TypeScript'], image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop&q=80' },
+  { id: 'd2', title: 'UX Design Fundamentals', description: 'Learn user experience design principles from industry experts with hands-on projects.', price: 49.99, category: 'Courses', type: 'digital', tags: ['Design', 'UX'], image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&q=80' },
+  { id: 'd3', title: 'Cloud Deployment Toolkit', description: 'SaaS tool for automating multi-cloud infrastructure deployments and monitoring.', price: 19.99, category: 'SaaS Tools', type: 'digital', tags: ['DevOps', 'Cloud'], image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&q=80' },
+  { id: 'd4', title: 'Data Science with Python', description: 'End-to-end data science workflow using Python, Pandas, and Scikit-learn.', price: 39.99, category: 'Courses', type: 'digital', tags: ['Data Science', 'Python'], image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80' },
+  { id: 'd5', title: 'Brand Identity Blueprint', description: 'Step-by-step guide to building a memorable brand identity from scratch.', price: 14.99, category: 'E-books', type: 'digital', tags: ['Branding', 'Marketing'], image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=300&fit=crop&q=80' },
+  { id: 'd6', title: 'Invoicer Pro', description: 'Automated invoicing and billing application for freelancers and agencies.', price: 9.99, category: 'Apps', type: 'digital', tags: ['Finance', 'Productivity'], image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&q=80' },
 ]
 
 const SAMPLE_PHYSICAL_PRODUCTS: SampleProduct[] = [
-  { id: 'p1', title: 'Wireless Noise-Cancelling Headphones', description: 'Premium over-ear headphones with 40-hour battery life and active noise cancellation.', price: 89.99, category: 'Electronics', type: 'physical', tags: ['Audio', 'Wireless'] },
-  { id: 'p2', title: 'Minimalist Leather Wallet', description: 'Handcrafted genuine leather wallet with RFID blocking technology.', price: 34.99, category: 'Fashion', type: 'physical', tags: ['Leather', 'Accessories'] },
-  { id: 'p3', title: 'Smart Home Diffuser', description: 'WiFi-enabled essential oil diffuser with app control and scheduling.', price: 45.99, category: 'Home', type: 'physical', tags: ['Smart Home', 'Wellness'] },
-  { id: 'p4', title: 'Resistance Band Set', description: 'Professional-grade latex resistance bands with door anchor and carry bag.', price: 24.99, category: 'Fitness', type: 'physical', tags: ['Exercise', 'Home Gym'] },
-  { id: 'p5', title: 'Ergonomic Desk Lamp', description: 'LED desk lamp with adjustable color temperature and USB charging port.', price: 52.99, category: 'Electronics', type: 'physical', tags: ['Lighting', 'Office'] },
-  { id: 'p6', title: 'Organic Cotton Hoodie', description: 'Sustainably made oversized hoodie with premium organic cotton blend.', price: 59.99, category: 'Fashion', type: 'physical', tags: ['Sustainable', 'Clothing'] },
+  { id: 'p1', title: 'Wireless Noise-Cancelling Headphones', description: 'Premium over-ear headphones with 40-hour battery life and active noise cancellation.', price: 89.99, category: 'Electronics', type: 'physical', tags: ['Audio', 'Wireless'], image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop&q=80' },
+  { id: 'p2', title: 'Minimalist Leather Wallet', description: 'Handcrafted genuine leather wallet with RFID blocking technology.', price: 34.99, category: 'Fashion', type: 'physical', tags: ['Leather', 'Accessories'], image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&h=300&fit=crop&q=80' },
+  { id: 'p3', title: 'Smart Home Diffuser', description: 'WiFi-enabled essential oil diffuser with app control and scheduling.', price: 45.99, category: 'Home', type: 'physical', tags: ['Smart Home', 'Wellness'], image: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?w=400&h=300&fit=crop&q=80' },
+  { id: 'p4', title: 'Resistance Band Set', description: 'Professional-grade latex resistance bands with door anchor and carry bag.', price: 24.99, category: 'Fitness', type: 'physical', tags: ['Exercise', 'Home Gym'], image: 'https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=400&h=300&fit=crop&q=80' },
+  { id: 'p5', title: 'Ergonomic Desk Lamp', description: 'LED desk lamp with adjustable color temperature and USB charging port.', price: 52.99, category: 'Electronics', type: 'physical', tags: ['Lighting', 'Office'], image: 'https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=400&h=300&fit=crop&q=80' },
+  { id: 'p6', title: 'Organic Cotton Hoodie', description: 'Sustainably made oversized hoodie with premium organic cotton blend.', price: 59.99, category: 'Fashion', type: 'physical', tags: ['Sustainable', 'Clothing'], image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=300&fit=crop&q=80' },
 ]
 
 const SAMPLE_AI_AGENTS: SampleProduct[] = [
-  { id: 'a1', title: 'FitCoach AI', description: 'Personal fitness coach that creates custom workout plans and tracks your progress.', price: 9.99, category: 'Fitness', type: 'ai-agent', tags: ['Workout', 'Health'] },
-  { id: 'a2', title: 'LinguaBot', description: 'Conversational language tutor supporting 15+ languages with real-time pronunciation feedback.', price: 14.99, category: 'Language', type: 'ai-agent', tags: ['Learning', 'Languages'] },
-  { id: 'a3', title: 'ChefMate AI', description: 'Recipe generator and meal planner based on your dietary preferences and ingredients.', price: 7.99, category: 'Cooking', type: 'ai-agent', tags: ['Recipes', 'Nutrition'] },
-  { id: 'a4', title: 'BizStrategy Pro', description: 'AI business consultant for market analysis, competitive research, and strategic planning.', price: 24.99, category: 'Business', type: 'ai-agent', tags: ['Strategy', 'Analytics'] },
-  { id: 'a5', title: 'StudyBuddy AI', description: 'Intelligent study companion that generates flashcards, quizzes, and study schedules.', price: 5.99, category: 'Study', type: 'ai-agent', tags: ['Education', 'Flashcards'] },
-  { id: 'a6', title: 'TaskFlow Agent', description: 'Productivity assistant for task management, calendar optimization, and daily planning.', price: 12.99, category: 'Productivity', type: 'ai-agent', tags: ['Tasks', 'Planning'] },
+  { id: 'a1', title: 'FitCoach AI', description: 'Personal fitness coach that creates custom workout plans and tracks your progress.', price: 9.99, category: 'Fitness', type: 'ai-agent', tags: ['Workout', 'Health'], image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop&q=80' },
+  { id: 'a2', title: 'LinguaBot', description: 'Conversational language tutor supporting 15+ languages with real-time pronunciation feedback.', price: 14.99, category: 'Language', type: 'ai-agent', tags: ['Learning', 'Languages'], image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&h=300&fit=crop&q=80' },
+  { id: 'a3', title: 'ChefMate AI', description: 'Recipe generator and meal planner based on your dietary preferences and ingredients.', price: 7.99, category: 'Cooking', type: 'ai-agent', tags: ['Recipes', 'Nutrition'], image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop&q=80' },
+  { id: 'a4', title: 'BizStrategy Pro', description: 'AI business consultant for market analysis, competitive research, and strategic planning.', price: 24.99, category: 'Business', type: 'ai-agent', tags: ['Strategy', 'Analytics'], image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&q=80' },
+  { id: 'a5', title: 'StudyBuddy AI', description: 'Intelligent study companion that generates flashcards, quizzes, and study schedules.', price: 5.99, category: 'Study', type: 'ai-agent', tags: ['Education', 'Flashcards'], image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop&q=80' },
+  { id: 'a6', title: 'TaskFlow Agent', description: 'Productivity assistant for task management, calendar optimization, and daily planning.', price: 12.99, category: 'Productivity', type: 'ai-agent', tags: ['Tasks', 'Planning'], image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=300&fit=crop&q=80' },
 ]
 
 // === HELPERS ===
@@ -313,11 +314,16 @@ function CartDrawer({ cart, setCart, open, onClose }: { cart: CartItem[]; setCar
 function ProductCard({ product, onAddToCart, onView }: { product: SampleProduct; onAddToCart: (p: SampleProduct) => void; onView: (p: SampleProduct) => void }) {
   const typeIcon = product.type === 'digital' ? <FiDownload size={14} /> : product.type === 'ai-agent' ? <FiCpu size={14} /> : <FiTruck size={14} />
   return (
-    <Card className="bg-card border-border hover:border-primary/40 transition-all group cursor-pointer" onClick={() => onView(product)}>
-      <div className="aspect-video bg-secondary/50 flex items-center justify-center">
-        <div className="flex flex-col items-center gap-2 text-muted-foreground group-hover:text-primary transition-colors">
-          {product.type === 'digital' ? <FiBook size={32} /> : product.type === 'ai-agent' ? <FiCpu size={32} /> : <FiPackage size={32} />}
-        </div>
+    <Card className="bg-card border-border hover:border-primary/40 transition-all group cursor-pointer overflow-hidden" onClick={() => onView(product)}>
+      <div className="aspect-video bg-secondary/50 relative overflow-hidden">
+        {product.image ? (
+          <img src={product.image} alt={product.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        ) : (
+          <div className="flex flex-col items-center justify-center h-full text-muted-foreground group-hover:text-primary transition-colors">
+            {product.type === 'digital' ? <FiBook size={32} /> : product.type === 'ai-agent' ? <FiCpu size={32} /> : <FiPackage size={32} />}
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <CardContent className="p-4 space-y-3">
         <div className="flex items-center gap-2">
@@ -347,8 +353,14 @@ function ProductDetailModal({ product, open, onClose, onAddToCart }: { product: 
           <DialogDescription className="text-muted-foreground font-light tracking-wider">{product.category}</DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">
-          <div className="aspect-video bg-secondary/50 flex items-center justify-center">
-            {product.type === 'digital' ? <FiBook size={48} className="text-muted-foreground" /> : product.type === 'ai-agent' ? <FiCpu size={48} className="text-muted-foreground" /> : <FiPackage size={48} className="text-muted-foreground" />}
+          <div className="aspect-video bg-secondary/50 overflow-hidden">
+            {product.image ? (
+              <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                {product.type === 'digital' ? <FiBook size={48} className="text-muted-foreground" /> : product.type === 'ai-agent' ? <FiCpu size={48} className="text-muted-foreground" /> : <FiPackage size={48} className="text-muted-foreground" />}
+              </div>
+            )}
           </div>
           <p className="text-sm text-foreground font-light leading-relaxed">{product.description}</p>
           {Array.isArray(product?.tags) && product.tags.length > 0 && (
@@ -516,7 +528,7 @@ function FooterSection({ setCurrentPage }: { setCurrentPage: (p: string) => void
             <h4 className="text-xs tracking-widest text-foreground font-normal mb-4">CONTACT</h4>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs text-muted-foreground font-light">
-                <FiMail size={14} /> <span>support@sedaqui.com</span>
+                <FiMail size={14} /> <span>sedaqui@gmail.com</span>
               </div>
             </div>
           </div>
@@ -712,7 +724,7 @@ function ContactPage() {
             {contactStatus && <p className={`text-xs font-light tracking-wider ${contactStatus.includes('success') ? 'text-green-500' : 'text-destructive'}`}>{contactStatus}</p>}
             <Button onClick={handleContactSubmit} className="w-full tracking-widest font-light">SEND MESSAGE</Button>
             <div className="pt-4 border-t border-border space-y-2">
-              <div className="flex items-center gap-2 text-xs text-muted-foreground font-light"><FiMail size={14} className="text-primary" /> support@sedaqui.com</div>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground font-light"><FiMail size={14} className="text-primary" /> sedaqui@gmail.com</div>
             </div>
           </CardContent>
         </Card>
@@ -1497,7 +1509,7 @@ function FAQPage({ setCurrentPage }: { setCurrentPage: (p: string) => void }) {
     { q: 'What is the shipping policy for physical products?', a: 'Physical products ship within 2-5 business days. Orders over $50 qualify for free shipping. International shipping is available with varying delivery times. You will receive tracking information via email once your order ships.' },
     { q: 'How do AI agents work?', a: 'AI agents are personal assistants powered by artificial intelligence. After purchase, you receive access to your agent through our platform. Each agent specializes in a specific area and learns from your interactions to provide increasingly personalized assistance.' },
     { q: 'What is your refund policy?', a: 'We offer a 30-day satisfaction guarantee on all products. Digital products can be refunded if you have not consumed more than 25% of the content. Physical products must be returned in original condition. AI agents can be refunded within 7 days of purchase.' },
-    { q: 'How do I contact customer support?', a: 'You can reach us through the AI chat support on our Contact page for instant answers, or send a message through the contact form. Email us directly at support@sedaqui.com for complex inquiries. We respond within 24 hours.' },
+    { q: 'How do I contact customer support?', a: 'You can reach us through the AI chat support on our Contact page for instant answers, or send a message through the contact form. Email us directly at sedaqui@gmail.com for complex inquiries. We respond within 24 hours.' },
   ]
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -1546,7 +1558,7 @@ function PrivacyPage({ setCurrentPage }: { setCurrentPage: (p: string) => void }
       </section>
       <section>
         <h2 className="text-base font-normal tracking-widest mb-3">CONTACT</h2>
-        <p className="text-muted-foreground">For privacy-related inquiries, contact us at support@sedaqui.com.</p>
+        <p className="text-muted-foreground">For privacy-related inquiries, contact us at sedaqui@gmail.com.</p>
       </section>
     </ContentPolicyPage>
   )
@@ -1592,11 +1604,11 @@ function RefundPage({ setCurrentPage }: { setCurrentPage: (p: string) => void })
       </section>
       <section>
         <h2 className="text-base font-normal tracking-widest mb-3">AI AGENTS</h2>
-        <p className="text-muted-foreground">AI agents may be refunded within 7 days of purchase if you are not satisfied with the service. After 7 days, refunds are evaluated on a case-by-case basis. Contact support@sedaqui.com to initiate a refund request.</p>
+        <p className="text-muted-foreground">AI agents may be refunded within 7 days of purchase if you are not satisfied with the service. After 7 days, refunds are evaluated on a case-by-case basis. Contact sedaqui@gmail.com to initiate a refund request.</p>
       </section>
       <section>
         <h2 className="text-base font-normal tracking-widest mb-3">HOW TO REQUEST A REFUND</h2>
-        <p className="text-muted-foreground">Email support@sedaqui.com with your order number, the product(s) you wish to return, and the reason for the refund. Our team will respond within 24 hours with next steps.</p>
+        <p className="text-muted-foreground">Email sedaqui@gmail.com with your order number, the product(s) you wish to return, and the reason for the refund. Our team will respond within 24 hours with next steps.</p>
       </section>
     </ContentPolicyPage>
   )

@@ -9,10 +9,13 @@ import { AgentInterceptorProvider } from '@/components/AgentInterceptorProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next.js App',
-  description: 'Built with Next.js, React, and Tailwind CSS',
+  title: 'SEDAQUI - AI-Powered Digital Commerce Platform',
+  description: 'Discover curated digital products, trending physical goods, and personal AI agents -- all in one luxury marketplace.',
   icons: {
     icon: '/lyzr.png',
+  },
+  other: {
+    'cryptomus': '86dd4873',
   },
 }
 
