@@ -110,6 +110,37 @@ export async function callAIAgent(
 
     const submitData = await submitRes.json()
 
+    // If the response is already a completed result (e.g., from OpenRouter fallback),
+    // return it directly without polling
+    if (submitData.success && submitData.status === 'completed' && submitData.response) {
+      return {
+        ...submitData,
+        agent_id,
+      }
+    }
+
+    // If submit itself failed with credits_exhausted_poll, retry without Lyzr
+    if (submitData.retry_with_fallback) {
+      // Re-submit — the server will use OpenRouter fallback on next attempt
+      const retryRes = await fetchWrapper('/api/agent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message,
+          agent_id,
+          user_id: options?.user_id,
+          session_id: options?.session_id,
+          assets: options?.assets,
+        }),
+      })
+      if (retryRes) {
+        const retryData = await retryRes.json()
+        if (retryData.success && retryData.status === 'completed' && retryData.response) {
+          return { ...retryData, agent_id }
+        }
+      }
+    }
+
     // If submit itself failed or no task_id returned, return as-is
     if (!submitData.task_id) {
       return submitData.success === false
