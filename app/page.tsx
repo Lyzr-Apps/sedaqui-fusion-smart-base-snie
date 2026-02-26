@@ -16,7 +16,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import { Switch } from '@/components/ui/switch'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
 import { Separator } from '@/components/ui/separator'
-import { FiShoppingCart, FiMail, FiSend, FiUpload, FiTrash2, FiChevronRight, FiChevronLeft, FiX, FiPlus, FiMinus, FiCheck, FiAlertCircle, FiPackage, FiCpu, FiBook, FiGlobe, FiShield, FiAward, FiZap, FiTag, FiMessageSquare, FiGrid, FiTruck, FiDownload, FiLoader, FiRefreshCw, FiHeart, FiArrowRight, FiLayers, FiDatabase, FiFileText } from 'react-icons/fi'
+import { FiShoppingCart, FiMail, FiSend, FiUpload, FiTrash2, FiChevronRight, FiChevronLeft, FiX, FiPlus, FiMinus, FiCheck, FiAlertCircle, FiPackage, FiCpu, FiBook, FiGlobe, FiShield, FiAward, FiZap, FiTag, FiMessageSquare, FiGrid, FiTruck, FiDownload, FiLoader, FiRefreshCw, FiHeart, FiArrowRight, FiLayers, FiDatabase, FiFileText, FiGift, FiKey, FiMapPin } from 'react-icons/fi'
 
 // === CONSTANTS ===
 const AGENT_IDS = {
@@ -101,6 +101,7 @@ interface SampleProduct {
 
 // === SAMPLE DATA ===
 const SAMPLE_DIGITAL_PRODUCTS: SampleProduct[] = [
+  { id: 'd-free', title: 'Introduction to AI - Free Sample', description: 'A complimentary introductory guide to artificial intelligence fundamentals. Download instantly to experience SEDAQUI digital delivery.', price: 0.00, category: 'E-books', type: 'digital', tags: ['AI', 'Free Sample', 'Beginner'], image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop&q=80' },
   { id: 'd1', title: 'Mastering TypeScript', description: 'A comprehensive guide to advanced TypeScript patterns and enterprise architecture.', price: 29.99, category: 'E-books', type: 'digital', tags: ['Programming', 'TypeScript'], image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop&q=80' },
   { id: 'd2', title: 'UX Design Fundamentals', description: 'Learn user experience design principles from industry experts with hands-on projects.', price: 49.99, category: 'Courses', type: 'digital', tags: ['Design', 'UX'], image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&q=80' },
   { id: 'd3', title: 'Cloud Deployment Toolkit', description: 'SaaS tool for automating multi-cloud infrastructure deployments and monitoring.', price: 19.99, category: 'SaaS Tools', type: 'digital', tags: ['DevOps', 'Cloud'], image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&q=80' },
@@ -110,6 +111,7 @@ const SAMPLE_DIGITAL_PRODUCTS: SampleProduct[] = [
 ]
 
 const SAMPLE_PHYSICAL_PRODUCTS: SampleProduct[] = [
+  { id: 'p-free', title: 'Premium Sticker Pack - Free Gift', description: 'A complimentary set of premium holographic stickers. Ships free to verify our delivery quality and speed.', price: 0.00, category: 'Fashion', type: 'physical', tags: ['Free Gift', 'Stickers', 'Collectible'], image: 'https://images.unsplash.com/photo-1572375992501-4b0892d50c69?w=400&h=300&fit=crop&q=80' },
   { id: 'p1', title: 'Wireless Noise-Cancelling Headphones', description: 'Premium over-ear headphones with 40-hour battery life and active noise cancellation.', price: 89.99, category: 'Electronics', type: 'physical', tags: ['Audio', 'Wireless'], image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop&q=80' },
   { id: 'p2', title: 'Minimalist Leather Wallet', description: 'Handcrafted genuine leather wallet with RFID blocking technology.', price: 34.99, category: 'Fashion', type: 'physical', tags: ['Leather', 'Accessories'], image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&h=300&fit=crop&q=80' },
   { id: 'p3', title: 'Smart Home Diffuser', description: 'WiFi-enabled essential oil diffuser with app control and scheduling.', price: 45.99, category: 'Home', type: 'physical', tags: ['Smart Home', 'Wellness'], image: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?w=400&h=300&fit=crop&q=80' },
@@ -119,6 +121,7 @@ const SAMPLE_PHYSICAL_PRODUCTS: SampleProduct[] = [
 ]
 
 const SAMPLE_AI_AGENTS: SampleProduct[] = [
+  { id: 'a-free', title: 'QuickCalc AI - Free Trial', description: 'A free AI calculator and unit converter agent. Try it out to experience how SEDAQUI AI agents work before purchasing premium agents.', price: 0.00, category: 'Productivity', type: 'ai-agent', tags: ['Free Trial', 'Calculator', 'Utility'], image: 'https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=400&h=300&fit=crop&q=80' },
   { id: 'a1', title: 'FitCoach AI', description: 'Personal fitness coach that creates custom workout plans and tracks your progress.', price: 9.99, category: 'Fitness', type: 'ai-agent', tags: ['Workout', 'Health'], image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop&q=80' },
   { id: 'a2', title: 'LinguaBot', description: 'Conversational language tutor supporting 15+ languages with real-time pronunciation feedback.', price: 14.99, category: 'Language', type: 'ai-agent', tags: ['Learning', 'Languages'], image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&h=300&fit=crop&q=80' },
   { id: 'a3', title: 'ChefMate AI', description: 'Recipe generator and meal planner based on your dietary preferences and ingredients.', price: 7.99, category: 'Cooking', type: 'ai-agent', tags: ['Recipes', 'Nutrition'], image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop&q=80' },
@@ -254,56 +257,271 @@ function SiteHeader({ currentPage, setCurrentPage, cartCount, onCartOpen }: { cu
 }
 
 function CartDrawer({ cart, setCart, open, onClose }: { cart: CartItem[]; setCart: React.Dispatch<React.SetStateAction<CartItem[]>>; open: boolean; onClose: () => void }) {
+  const [checkoutStep, setCheckoutStep] = useState<'cart' | 'checkout' | 'confirmation'>('cart')
+  const [checkoutForm, setCheckoutForm] = useState({ name: '', email: '', street: '', city: '', state: '', zip: '' })
+  const [orderNumber, setOrderNumber] = useState('')
+  const [fulfillmentResult, setFulfillmentResult] = useState<any>(null)
+  const [fulfillmentLoading, setFulfillmentLoading] = useState(false)
+
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
+  const hasPhysical = cart.some(item => item.type === 'physical')
+
   const updateQty = (id: string, delta: number) => {
     setCart(prev => prev.map(item => item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item))
   }
   const removeItem = (id: string) => {
     setCart(prev => prev.filter(item => item.id !== id))
   }
+
+  const generateOrderNumber = () => {
+    return 'ORD-' + Math.random().toString(36).substring(2, 8).toUpperCase()
+  }
+
+  const generateAccessKey = () => {
+    const seg = () => Math.random().toString(36).substring(2, 6).toUpperCase()
+    return `SEDAQUI-AI-${seg()}-${seg()}`
+  }
+
+  const handleCheckout = async () => {
+    if (!checkoutForm.name || !checkoutForm.email) return
+    if (hasPhysical && (!checkoutForm.street || !checkoutForm.city || !checkoutForm.state || !checkoutForm.zip)) return
+
+    const ordNum = generateOrderNumber()
+    setOrderNumber(ordNum)
+    setCheckoutStep('confirmation')
+
+    // Call Order Fulfillment Agent in the background
+    setFulfillmentLoading(true)
+    try {
+      const productList = cart.map(item => `${item.title} (x${item.quantity})`).join(', ')
+      const orderType = cart.every(c => c.type === 'digital') ? 'Digital' : cart.every(c => c.type === 'physical') ? 'Physical' : cart.every(c => c.type === 'ai-agent') ? 'AI Agent' : 'Mixed'
+      const msg = `Send order confirmation to ${checkoutForm.name} at ${checkoutForm.email}. Order #${ordNum}. Products: ${productList}. Order type: ${orderType}.`
+      const res = await callAIAgent(msg, AGENT_IDS.ORDER_FULFILLMENT)
+      const parsed = parseAgentResponse(res)
+      setFulfillmentResult(parsed)
+    } catch {
+      // Silent - confirmation still shown
+    } finally {
+      setFulfillmentLoading(false)
+    }
+  }
+
+  const handleFinish = () => {
+    setCart([])
+    setCheckoutStep('cart')
+    setCheckoutForm({ name: '', email: '', street: '', city: '', state: '', zip: '' })
+    setOrderNumber('')
+    setFulfillmentResult(null)
+    onClose()
+  }
+
+  const handleClose = () => {
+    if (checkoutStep === 'confirmation') {
+      handleFinish()
+    } else {
+      setCheckoutStep('cart')
+      onClose()
+    }
+  }
+
   if (!open) return null
   return (
     <div className="fixed inset-0 z-[60]">
-      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
+      <div className="absolute inset-0 bg-black/60" onClick={handleClose} />
       <div className="absolute right-0 top-0 h-full w-full max-w-md bg-card border-l border-border">
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-6 border-b border-border">
-            <h2 className="text-lg font-normal tracking-widest text-foreground">YOUR CART</h2>
-            <button onClick={onClose} className="text-muted-foreground hover:text-foreground"><FiX size={20} /></button>
+            <h2 className="text-lg font-normal tracking-widest text-foreground">
+              {checkoutStep === 'cart' ? 'YOUR CART' : checkoutStep === 'checkout' ? 'CHECKOUT' : 'ORDER CONFIRMED'}
+            </h2>
+            <button onClick={handleClose} className="text-muted-foreground hover:text-foreground"><FiX size={20} /></button>
           </div>
-          <ScrollArea className="flex-1 p-6">
-            {cart.length === 0 ? (
-              <div className="text-center py-12">
-                <FiShoppingCart size={40} className="mx-auto text-muted-foreground mb-4" />
-                <p className="text-muted-foreground text-sm font-light tracking-widest">Your cart is empty</p>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                {cart.map(item => (
-                  <div key={item.id} className="flex items-center gap-4 p-4 border border-border bg-secondary/30">
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-light tracking-wider text-foreground truncate">{item.title}</p>
-                      <p className="text-xs text-muted-foreground font-light mt-1">${item.price.toFixed(2)}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <button onClick={() => updateQty(item.id, -1)} className="p-1 text-muted-foreground hover:text-foreground"><FiMinus size={14} /></button>
-                      <span className="text-sm font-light w-6 text-center">{item.quantity}</span>
-                      <button onClick={() => updateQty(item.id, 1)} className="p-1 text-muted-foreground hover:text-foreground"><FiPlus size={14} /></button>
-                    </div>
-                    <button onClick={() => removeItem(item.id)} className="p-1 text-muted-foreground hover:text-destructive"><FiTrash2 size={14} /></button>
+
+          {checkoutStep === 'cart' && (
+            <>
+              <ScrollArea className="flex-1 p-6">
+                {cart.length === 0 ? (
+                  <div className="text-center py-12">
+                    <FiShoppingCart size={40} className="mx-auto text-muted-foreground mb-4" />
+                    <p className="text-muted-foreground text-sm font-light tracking-widest">Your cart is empty</p>
                   </div>
-                ))}
+                ) : (
+                  <div className="space-y-4">
+                    {cart.map(item => (
+                      <div key={item.id} className="flex items-center gap-4 p-4 border border-border bg-secondary/30">
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-light tracking-wider text-foreground truncate">{item.title}</p>
+                          <p className="text-xs text-muted-foreground font-light mt-1">{item.price === 0 ? 'FREE' : `$${item.price.toFixed(2)}`}</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button onClick={() => updateQty(item.id, -1)} className="p-1 text-muted-foreground hover:text-foreground"><FiMinus size={14} /></button>
+                          <span className="text-sm font-light w-6 text-center">{item.quantity}</span>
+                          <button onClick={() => updateQty(item.id, 1)} className="p-1 text-muted-foreground hover:text-foreground"><FiPlus size={14} /></button>
+                        </div>
+                        <button onClick={() => removeItem(item.id)} className="p-1 text-muted-foreground hover:text-destructive"><FiTrash2 size={14} /></button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </ScrollArea>
+              {cart.length > 0 && (
+                <div className="p-6 border-t border-border space-y-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground font-light tracking-widest">SUBTOTAL</span>
+                    <span className="text-foreground font-normal">{subtotal === 0 ? 'FREE' : `$${subtotal.toFixed(2)}`}</span>
+                  </div>
+                  <Button className="w-full tracking-widest font-light" onClick={() => setCheckoutStep('checkout')}>PROCEED TO CHECKOUT</Button>
+                </div>
+              )}
+            </>
+          )}
+
+          {checkoutStep === 'checkout' && (
+            <>
+              <ScrollArea className="flex-1 p-6">
+                <div className="space-y-4">
+                  <div className="border border-border p-4 bg-secondary/20 space-y-2 mb-4">
+                    <p className="text-xs tracking-widest text-muted-foreground font-light">ORDER SUMMARY</p>
+                    {cart.map(item => (
+                      <div key={item.id} className="flex justify-between text-sm font-light">
+                        <span className="text-foreground truncate flex-1">{item.title} x{item.quantity}</span>
+                        <span className="text-primary ml-2">{item.price === 0 ? 'FREE' : `$${(item.price * item.quantity).toFixed(2)}`}</span>
+                      </div>
+                    ))}
+                    <Separator className="bg-border" />
+                    <div className="flex justify-between text-sm font-normal">
+                      <span className="text-foreground tracking-widest">TOTAL</span>
+                      <span className="text-primary">{subtotal === 0 ? 'FREE' : `$${subtotal.toFixed(2)}`}</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label className="text-xs tracking-widest font-light">FULL NAME *</Label>
+                    <Input value={checkoutForm.name} onChange={e => setCheckoutForm(prev => ({ ...prev, name: e.target.value }))} placeholder="Your full name" className="mt-1 bg-secondary/30 border-border" />
+                  </div>
+                  <div>
+                    <Label className="text-xs tracking-widest font-light">EMAIL ADDRESS *</Label>
+                    <Input type="email" value={checkoutForm.email} onChange={e => setCheckoutForm(prev => ({ ...prev, email: e.target.value }))} placeholder="your@email.com" className="mt-1 bg-secondary/30 border-border" />
+                  </div>
+
+                  {hasPhysical && (
+                    <>
+                      <Separator className="bg-border" />
+                      <p className="text-xs tracking-widest text-muted-foreground font-light flex items-center gap-2"><FiMapPin size={12} /> SHIPPING ADDRESS</p>
+                      <div>
+                        <Label className="text-xs tracking-widest font-light">STREET *</Label>
+                        <Input value={checkoutForm.street} onChange={e => setCheckoutForm(prev => ({ ...prev, street: e.target.value }))} placeholder="123 Main Street" className="mt-1 bg-secondary/30 border-border" />
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <Label className="text-xs tracking-widest font-light">CITY *</Label>
+                          <Input value={checkoutForm.city} onChange={e => setCheckoutForm(prev => ({ ...prev, city: e.target.value }))} placeholder="City" className="mt-1 bg-secondary/30 border-border" />
+                        </div>
+                        <div>
+                          <Label className="text-xs tracking-widest font-light">STATE *</Label>
+                          <Input value={checkoutForm.state} onChange={e => setCheckoutForm(prev => ({ ...prev, state: e.target.value }))} placeholder="State" className="mt-1 bg-secondary/30 border-border" />
+                        </div>
+                      </div>
+                      <div>
+                        <Label className="text-xs tracking-widest font-light">ZIP CODE *</Label>
+                        <Input value={checkoutForm.zip} onChange={e => setCheckoutForm(prev => ({ ...prev, zip: e.target.value }))} placeholder="12345" className="mt-1 bg-secondary/30 border-border" />
+                      </div>
+                    </>
+                  )}
+                </div>
+              </ScrollArea>
+              <div className="p-6 border-t border-border space-y-3">
+                <Button className="w-full tracking-widest font-light" onClick={handleCheckout} disabled={!checkoutForm.name || !checkoutForm.email || (hasPhysical && (!checkoutForm.street || !checkoutForm.city || !checkoutForm.state || !checkoutForm.zip))}>
+                  COMPLETE ORDER
+                </Button>
+                <button onClick={() => setCheckoutStep('cart')} className="w-full text-center text-xs text-muted-foreground tracking-widest font-light hover:text-foreground transition-colors py-2">
+                  BACK TO CART
+                </button>
               </div>
-            )}
-          </ScrollArea>
-          {cart.length > 0 && (
-            <div className="p-6 border-t border-border space-y-4">
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground font-light tracking-widest">SUBTOTAL</span>
-                <span className="text-foreground font-normal">${subtotal.toFixed(2)}</span>
+            </>
+          )}
+
+          {checkoutStep === 'confirmation' && (
+            <ScrollArea className="flex-1 p-6">
+              <div className="space-y-6">
+                <div className="text-center py-4">
+                  <div className="w-16 h-16 mx-auto bg-green-600/20 border border-green-600/40 flex items-center justify-center mb-4">
+                    <FiCheck size={32} className="text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-normal tracking-widest text-foreground mb-1">ORDER PLACED</h3>
+                  <p className="text-xs text-muted-foreground font-light tracking-wider">Order #{orderNumber}</p>
+                  <p className="text-xs text-muted-foreground font-light mt-1">Confirmation will be sent to {checkoutForm.email}</p>
+                </div>
+
+                <Separator className="bg-border" />
+
+                <div className="space-y-3">
+                  <p className="text-xs tracking-widest text-muted-foreground font-light">YOUR PRODUCTS</p>
+                  {cart.map(item => (
+                    <div key={item.id} className="border border-border p-4 bg-secondary/20 space-y-2">
+                      <div className="flex justify-between items-start">
+                        <p className="text-sm font-light tracking-wider text-foreground">{item.title}</p>
+                        <span className="text-xs text-primary font-light">{item.price === 0 ? 'FREE' : `$${(item.price * item.quantity).toFixed(2)}`}</span>
+                      </div>
+                      {item.type === 'digital' && (
+                        <div className="bg-primary/10 border border-primary/30 p-3 flex items-center gap-3">
+                          <FiDownload size={16} className="text-primary flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-light tracking-wider text-foreground">Ready to download</p>
+                            <button className="text-xs text-primary tracking-widest font-light hover:underline mt-1 flex items-center gap-1">
+                              <FiDownload size={12} /> DOWNLOAD {item.title.toUpperCase().slice(0, 30)}
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                      {item.type === 'ai-agent' && (
+                        <div className="bg-primary/10 border border-primary/30 p-3 flex items-center gap-3">
+                          <FiKey size={16} className="text-primary flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-light tracking-wider text-foreground">Access Granted</p>
+                            <p className="text-xs text-primary tracking-widest font-mono mt-1">{generateAccessKey()}</p>
+                          </div>
+                        </div>
+                      )}
+                      {item.type === 'physical' && (
+                        <div className="bg-primary/10 border border-primary/30 p-3 flex items-center gap-3">
+                          <FiTruck size={16} className="text-primary flex-shrink-0" />
+                          <div>
+                            <p className="text-xs font-light tracking-wider text-foreground">Shipping in 3-5 business days</p>
+                            <p className="text-xs text-muted-foreground font-light mt-1">Tracking info will be sent to {checkoutForm.email}</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {fulfillmentLoading && (
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground font-light tracking-wider justify-center">
+                    <FiLoader size={14} className="animate-spin" /> Generating confirmation email...
+                  </div>
+                )}
+
+                {fulfillmentResult && (
+                  <div className="border border-border p-4 bg-secondary/20 space-y-2">
+                    <p className="text-xs tracking-widest text-muted-foreground font-light">EMAIL CONFIRMATION PREVIEW</p>
+                    <p className="text-sm font-light text-foreground">{fulfillmentResult?.email_subject ?? ''}</p>
+                    <div className="text-xs text-muted-foreground font-light leading-relaxed max-h-32 overflow-auto">
+                      {renderMarkdown(fulfillmentResult?.email_body_preview ?? '')}
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex justify-between text-sm font-normal pt-2 border-t border-border">
+                  <span className="text-foreground tracking-widest">TOTAL PAID</span>
+                  <span className="text-primary">{subtotal === 0 ? 'FREE' : `$${subtotal.toFixed(2)}`}</span>
+                </div>
+
+                <Button className="w-full tracking-widest font-light" onClick={handleFinish}>
+                  CONTINUE SHOPPING
+                </Button>
               </div>
-              <Button className="w-full tracking-widest font-light" onClick={onClose}>PROCEED TO CHECKOUT</Button>
-            </div>
+            </ScrollArea>
           )}
         </div>
       </div>
@@ -313,6 +531,8 @@ function CartDrawer({ cart, setCart, open, onClose }: { cart: CartItem[]; setCar
 
 function ProductCard({ product, onAddToCart, onView }: { product: SampleProduct; onAddToCart: (p: SampleProduct) => void; onView: (p: SampleProduct) => void }) {
   const typeIcon = product.type === 'digital' ? <FiDownload size={14} /> : product.type === 'ai-agent' ? <FiCpu size={14} /> : <FiTruck size={14} />
+  const isFree = product.price === 0
+  const buttonLabel = isFree ? 'GET FREE' : product.type === 'ai-agent' ? 'GET AGENT' : 'ADD TO CART'
   return (
     <Card className="bg-card border-border hover:border-primary/40 transition-all group cursor-pointer overflow-hidden" onClick={() => onView(product)}>
       <div className="aspect-video bg-secondary/50 relative overflow-hidden">
@@ -324,6 +544,11 @@ function ProductCard({ product, onAddToCart, onView }: { product: SampleProduct;
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        {isFree && (
+          <div className="absolute top-2 left-2 z-10">
+            <Badge className="bg-green-600 text-white border-green-600 text-xs font-light tracking-widest flex items-center gap-1"><FiGift size={10} /> FREE</Badge>
+          </div>
+        )}
       </div>
       <CardContent className="p-4 space-y-3">
         <div className="flex items-center gap-2">
@@ -333,9 +558,13 @@ function ProductCard({ product, onAddToCart, onView }: { product: SampleProduct;
         <h3 className="text-sm font-normal tracking-wider text-foreground leading-relaxed">{product.title}</h3>
         <p className="text-xs text-muted-foreground font-light leading-relaxed line-clamp-2">{product.description}</p>
         <div className="flex items-center justify-between pt-2">
-          <span className="text-primary font-normal text-lg">${product.price.toFixed(2)}</span>
-          <Button size="sm" className="text-xs tracking-widest font-light" onClick={(e) => { e.stopPropagation(); onAddToCart(product) }}>
-            {product.type === 'ai-agent' ? 'GET AGENT' : 'ADD TO CART'}
+          {isFree ? (
+            <span className="text-green-500 font-normal text-lg tracking-widest">FREE</span>
+          ) : (
+            <span className="text-primary font-normal text-lg">${product.price.toFixed(2)}</span>
+          )}
+          <Button size="sm" className={`text-xs tracking-widest font-light ${isFree ? 'bg-green-600 hover:bg-green-700 text-white' : ''}`} onClick={(e) => { e.stopPropagation(); onAddToCart(product) }}>
+            {buttonLabel}
           </Button>
         </div>
       </CardContent>
@@ -345,6 +574,8 @@ function ProductCard({ product, onAddToCart, onView }: { product: SampleProduct;
 
 function ProductDetailModal({ product, open, onClose, onAddToCart }: { product: SampleProduct | null; open: boolean; onClose: () => void; onAddToCart: (p: SampleProduct) => void }) {
   if (!product) return null
+  const isFree = product.price === 0
+  const buttonLabel = isFree ? 'GET FREE' : product.type === 'ai-agent' ? 'GET AGENT' : 'ADD TO CART'
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="bg-card border-border max-w-lg">
@@ -353,7 +584,7 @@ function ProductDetailModal({ product, open, onClose, onAddToCart }: { product: 
           <DialogDescription className="text-muted-foreground font-light tracking-wider">{product.category}</DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">
-          <div className="aspect-video bg-secondary/50 overflow-hidden">
+          <div className="aspect-video bg-secondary/50 overflow-hidden relative">
             {product.image ? (
               <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
             ) : (
@@ -361,8 +592,18 @@ function ProductDetailModal({ product, open, onClose, onAddToCart }: { product: 
                 {product.type === 'digital' ? <FiBook size={48} className="text-muted-foreground" /> : product.type === 'ai-agent' ? <FiCpu size={48} className="text-muted-foreground" /> : <FiPackage size={48} className="text-muted-foreground" />}
               </div>
             )}
+            {isFree && (
+              <div className="absolute top-2 left-2">
+                <Badge className="bg-green-600 text-white border-green-600 text-xs font-light tracking-widest flex items-center gap-1"><FiGift size={10} /> FREE</Badge>
+              </div>
+            )}
           </div>
           <p className="text-sm text-foreground font-light leading-relaxed">{product.description}</p>
+          {isFree && (
+            <div className="bg-green-600/10 border border-green-600/30 p-3">
+              <p className="text-xs text-green-500 font-light tracking-wider flex items-center gap-2"><FiGift size={14} /> No payment required. Instant delivery after checkout.</p>
+            </div>
+          )}
           {Array.isArray(product?.tags) && product.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {product.tags.map((tag, i) => <Badge key={i} variant="outline" className="text-xs font-light tracking-wider">{tag}</Badge>)}
@@ -370,13 +611,17 @@ function ProductDetailModal({ product, open, onClose, onAddToCart }: { product: 
           )}
           {product.type === 'physical' && (
             <div className="flex items-center gap-2 text-xs text-muted-foreground font-light">
-              <FiTruck size={14} /> <span>Free shipping on orders over $50</span>
+              <FiTruck size={14} /> <span>{isFree ? 'Ships free' : 'Free shipping on orders over $50'}</span>
             </div>
           )}
           <div className="flex items-center justify-between pt-4 border-t border-border">
-            <span className="text-primary text-2xl font-normal">${product.price.toFixed(2)}</span>
-            <Button className="tracking-widest font-light" onClick={() => { onAddToCart(product); onClose() }}>
-              {product.type === 'ai-agent' ? 'GET AGENT' : 'ADD TO CART'}
+            {isFree ? (
+              <span className="text-green-500 text-2xl font-normal tracking-widest">FREE</span>
+            ) : (
+              <span className="text-primary text-2xl font-normal">${product.price.toFixed(2)}</span>
+            )}
+            <Button className={`tracking-widest font-light ${isFree ? 'bg-green-600 hover:bg-green-700 text-white' : ''}`} onClick={() => { onAddToCart(product); onClose() }}>
+              {buttonLabel}
             </Button>
           </div>
         </div>
@@ -1614,12 +1859,121 @@ function RefundPage({ setCurrentPage }: { setCurrentPage: (p: string) => void })
   )
 }
 
+// === FLOATING CHATBOT WIDGET ===
+function ChatbotWidget() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
+  const [chatInput, setChatInput] = useState('')
+  const [chatLoading, setChatLoading] = useState(false)
+  const chatEndRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [chatMessages])
+
+  const handleChatSend = async () => {
+    if (!chatInput.trim() || chatLoading) return
+    const userMsg = chatInput.trim()
+    setChatInput('')
+    setChatMessages(prev => [...prev, { role: 'user', content: userMsg }])
+    setChatLoading(true)
+    try {
+      const result = await callAIAgent(userMsg, AGENT_IDS.CUSTOMER_SUPPORT)
+      const parsed = parseAgentResponse(result)
+      const answer = parsed?.answer ?? parsed?.text ?? result?.response?.message ?? 'I apologize, I could not process your request at this time.'
+      const followUp = parsed?.follow_up_question ?? ''
+      const category = parsed?.category ?? ''
+      setChatMessages(prev => [...prev, { role: 'assistant', content: answer, followUp, category }])
+    } catch {
+      setChatMessages(prev => [...prev, { role: 'assistant', content: 'An error occurred. Please try again.' }])
+    } finally {
+      setChatLoading(false)
+    }
+  }
+
+  return (
+    <>
+      {/* Floating Chat Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`fixed bottom-5 left-5 z-[55] w-14 h-14 flex items-center justify-center bg-primary text-primary-foreground border border-primary/60 shadow-lg hover:shadow-xl transition-all duration-300 ${isOpen ? 'scale-90' : 'animate-pulse hover:animate-none hover:scale-105'}`}
+        style={{ animationDuration: '3s' }}
+        aria-label="Open support chat"
+      >
+        {isOpen ? <FiX size={22} /> : <FiMessageSquare size={22} />}
+      </button>
+
+      {/* Chat Panel */}
+      {isOpen && (
+        <div className="fixed bottom-24 left-5 z-[55] w-[340px] sm:w-[380px] h-[500px] bg-card border border-border shadow-2xl flex flex-col overflow-hidden">
+          {/* Header */}
+          <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-secondary/30">
+            <div className="flex items-center gap-2">
+              <FiMessageSquare size={16} className="text-primary" />
+              <span className="text-sm font-normal tracking-widest text-foreground">SEDAQUI SUPPORT</span>
+            </div>
+            <button onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground"><FiX size={16} /></button>
+          </div>
+
+          {/* Messages */}
+          <ScrollArea className="flex-1 p-4">
+            <div className="space-y-3">
+              {chatMessages.length === 0 && (
+                <div className="text-center py-8">
+                  <FiMessageSquare size={28} className="mx-auto text-muted-foreground mb-3" />
+                  <p className="text-xs text-muted-foreground font-light tracking-wider mb-1">Welcome to SEDAQUI Support</p>
+                  <p className="text-xs text-muted-foreground font-light">Ask about products, orders, or policies</p>
+                </div>
+              )}
+              {chatMessages.map((msg, i) => (
+                <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[85%] p-3 text-sm font-light leading-relaxed ${msg.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-secondary/50 text-foreground border border-border'}`}>
+                    {msg.role === 'assistant' ? renderMarkdown(msg.content) : msg.content}
+                    {msg.followUp && (
+                      <button onClick={() => setChatInput(msg.followUp ?? '')} className="block mt-2 text-xs text-primary hover:underline font-light tracking-wider">
+                        {msg.followUp}
+                      </button>
+                    )}
+                    {msg.category && <Badge variant="outline" className="mt-2 text-xs font-light">{msg.category}</Badge>}
+                  </div>
+                </div>
+              ))}
+              {chatLoading && (
+                <div className="flex justify-start">
+                  <div className="bg-secondary/50 border border-border p-3 text-sm text-muted-foreground font-light flex items-center gap-2">
+                    <FiLoader size={14} className="animate-spin" /> Thinking...
+                  </div>
+                </div>
+              )}
+              <div ref={chatEndRef} />
+            </div>
+          </ScrollArea>
+
+          {/* Input */}
+          <div className="flex gap-2 p-3 border-t border-border">
+            <Input
+              value={chatInput}
+              onChange={e => setChatInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleChatSend()}
+              placeholder="Type your question..."
+              className="bg-secondary/30 border-border text-sm font-light"
+            />
+            <Button onClick={handleChatSend} disabled={chatLoading || !chatInput.trim()} size="sm" className="tracking-widest px-3">
+              <FiSend size={14} />
+            </Button>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
 // === MAIN PAGE EXPORT ===
 export default function Page() {
   const [currentPage, setCurrentPage] = useState('home')
   const [cart, setCart] = useState<CartItem[]>([])
   const [cartOpen, setCartOpen] = useState(false)
-  const [showSample, setShowSample] = useState(false)
+  const [showSample, setShowSample] = useState(true)
   const [selectedProduct, setSelectedProduct] = useState<SampleProduct | null>(null)
   const [productModalOpen, setProductModalOpen] = useState(false)
 
@@ -1690,6 +2044,9 @@ export default function Page() {
         <CartDrawer cart={cart} setCart={setCart} open={cartOpen} onClose={() => setCartOpen(false)} />
 
         <ProductDetailModal product={selectedProduct} open={productModalOpen} onClose={() => setProductModalOpen(false)} onAddToCart={addToCart} />
+
+        {/* Global Floating Chatbot Widget */}
+        <ChatbotWidget />
       </div>
     </ErrorBoundary>
   )
